@@ -80,13 +80,13 @@ function totalTwoMeals(perDiemRate)
 function getRates()
 {
 	var perDiemRate = document.getElementsByName("PerDiemRate")[0].value;
-	document.getElementsByName("MealPerDay")[0].value = mealsPerDay(perDiemRate);
-	document.getElementsByName("MealsPercentage")[0].value = mealsPercentage(perDiemRate);
-	document.getElementsByName("LessThanTwenty")[0].value = totalMealsTwenty(perDiemRate);
-	document.getElementsByName("OneMealConference")[0].value = oneMealConference(perDiemRate);
-	document.getElementsByName("TotalOneMealConference")[0].value = totalOneMealConference(perDiemRate);
-	document.getElementsByName("TwoMealsConference")[0].value = twoMealsConference(perDiemRate);
-	document.getElementsByName("TotalTwoMealsConference")[0].value = totalTwoMealsConference(perDiemRate);
+	document.getElementsByName("MealPerDay")[0].value = Math.round(mealsPerDay(perDiemRate)*100)/100;
+	document.getElementsByName("MealsPercentage")[0].value = Math.round(mealsPercentage(perDiemRate)*100)/100;
+	document.getElementsByName("LessThanTwenty")[0].value = Math.round(totalMealsTwenty(perDiemRate)*100)/100;
+	document.getElementsByName("OneMealConference")[0].value = Math.roundoneMealConference(perDiemRate)*100)/100;
+	document.getElementsByName("TotalOneMealConference")[0].value = Math.round(totalOneMealConference(perDiemRate)*100)/100;
+	document.getElementsByName("TwoMealsConference")[0].value = Math.round(twoMealsConference(perDiemRate)*100)/100;
+	document.getElementsByName("TotalTwoMealsConference")[0].value = Math.round(totalTwoMealsConference(perDiemRate)*100)/100;
 	document.getElementsByName("OneMeal")[0].value = Math.round(oneMeal(perDiemRate)*100)/100;
 	document.getElementsByName("TotalOneMeal")[0].value = Math.round(totalOneMeal(perDiemRate)*100)/100;
 	document.getElementsByName("TwoMeals")[0].value = Math.round(twoMeals(perDiemRate)*100)/100;
