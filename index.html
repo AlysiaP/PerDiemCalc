@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Financial Calculator</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div style="float: left;">
+		<table class="table">
+			<tbody>
+				<tr colspan="3">
+					<td>Enter Per Diem Daily Rate</td>
+					<td><input min="0.00" name="PerDiemRate" type="number" value="0"></td>
+
+				</tr>
+				<tr>
+					<td>Meals/Day</td>
+					<td>Incidental/Day</td>
+				</tr>
+				<tr>
+					<td><input class="results" disabled="disabled" name="MealPerDay" step="any" value="0.00" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="Incidentals" value="5.00" readonly="readonly" type="number"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div style="float: left;clear:both;">
+		<table class="table">
+			<tbody>
+				<tr>
+					<td colspan="3">1st & Last Day of Travel if traveling less than 20 hours</td>
+				</tr>
+				<tr>
+					<td>Meals (75%)</td>
+					<td>Incidentals</td>
+					<td>Total</td>
+				</tr>
+				<tr>
+					<td><input class="results" disabled="disabled" name="MealsPercentage" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="Incidentals" value="5.00" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="LessThanTwenty" readonly="readonly" type="number"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div style="float: left;clear:both;">
+		<table class="table">
+			<tbody>
+				<tr>
+					<td colspan="3">Conference Meals - not 1st of Last Day</td>
+				</tr>
+				<tr>
+					<td>1 meal provided</td>
+					<td>Incidental</td>
+					<td>Total 1 meal provided</td>
+					
+				</tr>
+				<tr>
+					<td><input class="results" disabled="disabled" name="OneMealConference" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="Incidentals" value="5.00" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="TotalOneMealConference" readonly="readonly" type="number"></td>
+				</tr>
+				<tr>
+					<td>2 meals provided</td>
+					<td>Incidental</td>
+					<td>Total 2 meals provided</td>
+					
+				</tr>
+				<tr>
+					<td><input class="results" disabled="disabled" name="TwoMealsConference" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="Incidentals" value="5.00" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="TotalTwoMealsConference" readonly="readonly" type="number"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div style="float: left;clear:both;">
+		<table class="table">
+			<tbody>
+				<tr>
+					<td colspan="3">Conference Meals - 1st and last day if traveling less than 10 hours</td>
+				</tr>
+				<tr>
+					<td>1 meal provided</td>
+					<td>Incidental</td>
+					<td>Total</td>
+					
+				</tr>
+				<tr>
+					<td><input class="results" disabled="disabled" name="OneMeal" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="Incidentals" value="5.00" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="TotalOneMeal" readonly="readonly" type="number"></td>
+				</tr>
+				<tr>
+					<td>2 meals provided</td>
+					<td>Incidental</td>
+					<td>Total</td>
+					
+				</tr>
+				<tr>
+					<td><input class="results" disabled="disabled" name="TwoMeals" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="Incidentals" value="5.00" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="TotalTwoMeals" readonly="readonly" type="number"></td>
+				</tr>
+
+			</tbody>
+		</table>
+		<div align="center">
+			<button onclick="getRates()" type="button">Get Rates</button> <button onclick="resetFields()" type="button">Reset</button>
+		</div>
+	</div>
+	<div style="float: left; clear: both;">
+		<ul>
+			<li>Fill out the Per Diem daily rate at the top.</li>
+			<li>Click the Get Rates button to populate the right side of the table.</li>
+			<li>Click the Reset button to reset the calculator to default values.</li>
+			<li>Note: If you are using Internet Explorer, click the Allow Blocked Content button to allow the script to execute.</li>
+		</ul>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>
