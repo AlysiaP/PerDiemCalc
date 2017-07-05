@@ -74,6 +74,10 @@ function totalTwoMeals(perDiemRate)
 	return twoMeals(perDiemRate) + 5;
 }
 
+//to show 2 decimal placements at all times
+function setTwoNumberDecimal(event) {
+    this.value = parseFloat(this.value).toFixed(2);
+}
 
 
 //get values for each variable being called in the above functions
